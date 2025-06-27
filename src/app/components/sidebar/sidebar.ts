@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
 import { RouterModule } from '@angular/router';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-sidebar',
@@ -11,7 +12,24 @@ import { RouterModule } from '@angular/router';
 })
 export class Sidebar {
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) {
+    this.router.events
+    .pipe(filter(event => event instanceof NavigationEnd))
+    .subscribe(() => this.closeSidebar());
+  }
+
+  sidebarVisible = false;
+
+  toggleSidebar() {
+    this.sidebarVisible = !this.sidebarVisible;
+    document.body.classList.toggle('sidebar-open', this.sidebarVisible);
+  }
+
+  closeSidebar() {
+    this.sidebarVisible = false;
+    document.body.classList.remove('sidebar-open');
+  }
+
 
   logout() {
     localStorage.removeItem('auth_token');

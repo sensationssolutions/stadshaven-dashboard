@@ -1,0 +1,11 @@
+.btn-close-sidebar {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 10000;
+}
+

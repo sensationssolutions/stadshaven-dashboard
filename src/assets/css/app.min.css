@@ -2095,7 +2095,7 @@ html[data-bs-theme="light"]
   background-color: #fff;
 }
 .footer {
-  bottom: 0;
+/*  bottom: 0;*/
   position: absolute;
   right: 0;
   left: 0;
