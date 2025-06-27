@@ -1,0 +1,102 @@
+<div class="startbar d-print-none">
+  <div class="brand">
+    <a routerLink="/" class="logo">
+      <span>
+
+      </span>
+      <span>
+       <h1 routerLink='/home' style="color: #1b8bfc;">STADSHAVEN</h1>
+       <img src="assets/images/logo-dark.png" alt="logo-large" class="logo-lg logo-dark">
+     </span>
+   </a>
+ </div>
+
+ <div class="startbar-menu">
+  <div class="startbar-collapse" id="startbarCollapse" data-simplebar>
+    <div class="d-flex align-items-start flex-column w-100">
+      <ul class="navbar-nav mb-auto w-100">
+        <li class="menu-label pt-0 mt-0">
+          <span>Main Menu</span>
+        </li>
+
+        <li class="nav-item">
+          <a 
+          [routerLink]="['/home']"
+          [routerLinkActive]="'active another-class'"
+          [routerLinkActiveOptions]="{ exact: true }"
+          class="nav-link"
+          >
+          <i class="iconoir-home-simple menu-icon"></i>
+          <span>Dashboard</span>
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a 
+        class="nav-link" 
+        routerLink="/services" 
+        routerLinkActive="active another-class"
+        >
+        <i class="iconoir-compact-disc menu-icon"></i>
+        <span>Services</span>
+      </a>
+    </li>
+
+
+
+<!--     <li class="nav-item">
+      <a 
+      class="nav-link" 
+      routerLink="/careers" 
+      routerLinkActive="active another-class"
+      >
+      <i class="iconoir-compact-disc menu-icon"></i>
+      <span>Careers</span>
+    </a>
+  </li> -->
+
+  <li class="nav-item">
+    <a 
+    class="nav-link" 
+    routerLink="/testimonials" 
+    routerLinkActive="active another-class"
+    >
+    <i class="iconoir-compact-disc menu-icon"></i>
+    <span>Testimonials</span>
+  </a>
+</li>
+
+  <li class="nav-item">
+    <a 
+    class="nav-link" 
+    routerLink="/contact" 
+    routerLinkActive="active another-class"
+    >
+    <i class="iconoir-compact-disc menu-icon"></i>
+    <span>Contacts</span>
+  </a>
+</li>
+
+<li class="nav-item">
+  <a class="nav-link" href="#" (click)="logout(); $event.preventDefault()">
+    <i class="iconoir-compact-disc menu-icon"></i>
+    <span>LogOut</span>
+  </a>
+</li>
+
+
+</ul>
+
+<div class="update-msg text-center">
+  <div class="d-flex justify-content-center align-items-center thumb-lg update-icon-box rounded-circle mx-auto">
+    <i class="iconoir-peace-hand h3 align-self-center mb-0 text-primary"></i>
+  </div>
+  <h5 class="mt-3">STADSHAVEN</h5>
+  <p class="mb-3 text-muted">Safe and Smooth Vessel Operations.</p>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="startbar-overlay d-print-none"></div>
