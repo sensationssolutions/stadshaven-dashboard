@@ -27,7 +27,7 @@
 
 .preview-content {
   min-height: 100px;
-  background-color: black; !important;
+  background-color: black !important;
   border-radius: 4px;
 }
 ::ng-deep .NgxEditor__MenuBar {
